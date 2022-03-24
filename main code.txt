@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("If you want to calculate the Surface Area or Volume of a Box, Pyramid, or Circle: \n enter the word Box, Pyramid, or Circle and wait further instruction");
+
+        string userResponse = Console.ReadLine();
+        if (userResponse == "Box")
+        {
+            Console.WriteLine("enter measurements in order length, height, width");
+            int l = Int32.Parse(Console.ReadLine());
+
+            int h = Int32.Parse(Console.ReadLine());
+
+            int w = Int32.Parse(Console.ReadLine());
+
+            int Fi = l * w;
+            int Se = l * h;
+            int Th = w * h;
+            int SA = (Fi * 2) + (Se * 2) + (Th * 2);
+            int V = l * h * w;
+            Console.WriteLine("Volume = " + V );
+            Console.WriteLine("Surface Area = " + SA);
+        }
+        else if (userResponse == "Circle")
+        {
+            Console.WriteLine("enter measurements in order Radius, Area, height");
+            int r = Int32.Parse(Console.ReadLine());
+        
+
+            int a = Int32.Parse(Console.ReadLine());
+
+          int h = Int32.Parse(Console.ReadLine());
+
+          int R = (r * r) * 3;
+          int A = (r * r) * 3 * h;
+          Console.WriteLine("Surface Area = " + R);
+          Console.WriteLine("Volume = " + A);
+
+        }
+        else if (userResponse == "Pyramid")
+        {
+            Console.WriteLine("enter measurements in order : Width \n length and Height are precalculated L = 4, H = 6");
+
+            int b = Int32.Parse(Console.ReadLine());
